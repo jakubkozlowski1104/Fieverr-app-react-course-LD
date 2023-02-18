@@ -4,7 +4,7 @@ import "./Navbar.scss";
 // import { Link } from "react-dom";
 const Navbar = () => {
   const [active, setActive] = useState(false);
-  const [isMenuActive, setIsMenuActive] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -18,9 +18,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleMenu = () => {
-    setIsMenuActive(!isMenuActive);
-  };
 
   const currentUser = {
     id: 1,
@@ -45,13 +42,13 @@ const Navbar = () => {
           {!currentUser?.isSeller && <span>Become a Seller</span>}
           {!currentUser && <button>Join</button>}
           {currentUser && (
-            <div className="user" onClick={handleMenu}>
+            <div className="user" onClick={() => setIsOpen(!isOpen)}>
               <img
                 src="https://images.pexels.com/photos/1115697/pexels-photo-1115697.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt="user-logo"
               />
               <span>{currentUser?.username}</span>
-              {isMenuActive && (
+              {isOpen && (
                 <div className="options">
                   {currentUser?.isSeller && (
                     <>
