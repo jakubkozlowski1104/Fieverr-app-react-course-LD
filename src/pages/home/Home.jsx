@@ -6,6 +6,7 @@ import "./Home.scss";
 import CatCard from "../../components/catCard/CatCard";
 import { cards } from "../../data";
 import FeatureVideo from "../../components/FeatureVideo/FeatureVideo";
+import FeatureBusiness from "../../components/FeatureBusiness/FeatureBusiness";
 const Home = () => {
   return (
     <div className="home">
@@ -17,6 +18,7 @@ const Home = () => {
         ))}
       </Slide>
       <FeatureVideo />
+      <FeatureBusiness />
     </div>
   );
 };
