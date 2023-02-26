@@ -36,20 +36,12 @@ function App() {
           element: <Gigs />,
         },
         {
-          path: "/gig/:id",
-          element: <Gig />,
+          path: "/myGigs",
+          element: <MyGigs />,
         },
         {
           path: "/orders",
           element: <Orders />,
-        },
-        {
-          path: "/mygigs",
-          element: <MyGigs />,
-        },
-        {
-          path: "/add",
-          element: <Add />,
         },
         {
           path: "/messages",
@@ -58,6 +50,14 @@ function App() {
         {
           path: "/message/:id",
           element: <Message />,
+        },
+        {
+          path: "/add",
+          element: <Add />,
+        },
+        {
+          path: "/gig/:id",
+          element: <Gig />,
         },
       ],
     },
